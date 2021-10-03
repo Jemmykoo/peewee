@@ -1,11 +1,15 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Navigation from "./Components/Navigation";
+import Page from "./Components/Page";
+
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>This is my first try at a react app </p>
-      </header>
+    <div>
+      <Navigation />
+      <Page />
     </div>
   );
 }
