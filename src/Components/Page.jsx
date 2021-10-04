@@ -22,15 +22,31 @@ function Page(props) {
     }
     return false;
   };
+
   return (
     <div className="d-flex justify-content-around">
       <Form.Group>
         <Form.Label>First Name</Form.Label>
-        <Form.Control type="text" value={props.fname} onChange={changeFname} />
+        <Form.Control
+          type="text"
+          value={props.fname}
+          onChange={changeFname}
+          isInvalid={props.fname.trim() === ""}
+        />
         <Form.Label>Last Name</Form.Label>
-        <Form.Control type="text" value={props.lname} onChange={changeLname} />
+        <Form.Control
+          type="text"
+          value={props.lname}
+          onChange={changeLname}
+          isInvalid={props.lname.trim() === ""}
+        />
         <Form.Label>Age</Form.Label>
-        <Form.Control type="text" value={props.age} onChange={changeAge} />
+        <Form.Control
+          type="text"
+          value={props.age}
+          onChange={changeAge}
+          isInvalid={isNaN(props.age) || props.age.toString().trim() === ""}
+        />
         <br />
         <Button
           onClick={() =>
