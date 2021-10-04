@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
-  const [age, setAge] = useState("");
+  const [age, setAge] = useState(0);
 
   return (
     <div>

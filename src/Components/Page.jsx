@@ -15,7 +15,8 @@ function Page(props) {
     if (
       props.fname.trim() === "" ||
       props.lname.trim() === "" ||
-      props.age.trim() === ""
+      props.age.toString().trim() === "" ||
+      isNaN(props.age)
     ) {
       return true;
     }
